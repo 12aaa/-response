@@ -1,0 +1,317 @@
+// 设置初始化样式
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: 0;
+// }
+body{
+    color: #808080;
+    a{
+        color: inherit;
+    }
+}
+
+// 设置顶部导航栏样式
+.wjs_top_nav{
+    .row>div{
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+    &:nth-child(4){
+            border-right: none;
+    }
+    .phone_img{
+        position: relative;
+        &:hover>img{
+            display: block;
+        }
+        >img{
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: -6px;
+            z-index: 99;
+        }
+    }
+}
+
+// 设置导航条样式
+.nav_wjs{
+    .navbar{
+        height: 80px;
+        margin-bottom: 1px;
+        .navbar-toggle{
+            margin-top: 20px;
+        }
+        // 品牌logo
+        .navbar-brand{
+            font-size: 70px;
+            padding-top: 7px;
+            .wjsfont-logo{
+                color: red;
+            }
+        }
+        a{
+            height: 80px;
+            line-height: 80px;
+            padding-top: 0;
+            padding-bottom: 0;
+            &:hover,&:focus{
+                border-bottom: 1px solid red;
+            }
+        }
+    }   
+}
+
+// 设置轮播图样式
+.wjs_carousel{
+    img{
+        width: 100%;
+    }
+}
+
+// 支付交易保障样式
+.wjs_pay{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    .row{
+        >div{
+            margin-bottom: 20px;
+        }
+    }
+    a{
+        .media-left{
+            span{
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// 排队预约
+.wjs_waiting{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    height: 80px;
+    padding-top: 30px;
+    .go_wait{
+        color: orangered;
+        border-bottom: 1px dashed currentColor;
+        font-size: 16px;
+    }
+    .pull-right{
+        a{
+            color: black;
+        }
+    }
+}
+
+//微投资
+.wjs_invest{
+
+  /* 
+  页面的元素 分两种类似
+  块级 容器使用
+  行内 点缀 美化页面 
+   */
+   .row{
+     padding: 20px;
+     >div{
+       margin-bottom: 35px;
+     }
+   }
+  /* 默认的卡片  灰色 cart_default */
+ .cart_default{
+   display: block;
+   position: relative;
+   padding-right: 80px;
+   background-color: #f7f7f7;
+   box-shadow: 0 0 1px 1px #ccc;
+   transition: box-shadow 1s;
+   &:hover{
+    box-shadow: 0 0 20px 0px #ccc;
+   }
+   /* 左边 */
+   .cart_main{
+     padding: 15px;
+     padding-top: 25px;
+     border-right: 1px dashed #000;
+    h4{
+      text-align: center;
+    }
+    .cart_info{
+     .pull-left{} 
+     .pull-right{
+      //  text-align: right;
+     } 
+    }
+   }
+   /* 右边 */
+   .cart_rate{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 80px;
+     height: 100%;
+     text-align: center;
+     padding-top: 40px;
+     &::before{
+       content: "";
+       position: absolute;
+       width: 20px;
+       height: 20px;
+       background-color: #fff;
+       border-radius: 50%;
+       left: -10px;
+       top: -10px;
+      //  水平偏移 垂直偏移 模糊值 外延值 颜色 ?内外阴影
+       box-shadow: 0 3px 3px 0px #ccc;
+     }
+     &::after{
+       content: "";
+       position: absolute;
+       width: 20px;
+       height: 20px;
+       background-color: #fff;
+       border-radius: 50%;
+       left: -10px;
+       bottom: -10px;
+      //  水平偏移 垂直偏移 模糊值 外延值 颜色 ?内外阴影
+       box-shadow: 0 -3px 3px 0px #ccc;
+     }
+   }
+ } 
+ /* 红色的卡片 */
+ .cart_exp{
+   background-color: red;
+   color: #fff;
+   .cart_main{
+     position: relative;
+     border-color: #fff;
+     .wjsfont{
+       position: absolute;
+       top: 0;
+       left: 0;
+       font-size: 45px;
+
+     }
+   }
+ }
+ /* 有进度条的卡片 */
+ .cart_progress{
+   .cart_main{
+     .cart_info{
+       >div{
+         width: 50%;
+       }
+     }
+   }
+   .cart_rate{
+     .tips{
+       /* 
+       nth-child和nth-of-type
+        */
+       span:nth-child(1){
+         color: green;
+         border: 1px solid currentColor;
+       }
+       span:nth-of-type(2){
+         color: red;
+         border: 1px solid currentColor;
+       }
+     }
+   }
+   .progress{
+       margin-bottom: 5px;
+   }
+ }
+}
+
+//新闻内容
+.wjs_news{
+  /* 全部新闻 */
+  .all_news{
+    font-size: 32px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    position: relative;
+    &::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      position: absolute;
+      right: -10px;
+      bottom: -5px;
+    }
+  }
+  /* 新闻标题 */
+  .news_title{
+    position: relative;
+    .wjs_dashed{
+        position: absolute;
+        width: 0;
+        border-left: 1px dashed #000;
+        height:400px;
+        left: 76px;
+        top: 12px;
+        z-index: -1;
+    }
+    ul{
+      list-style: none;
+      
+      li{
+        margin-bottom: 60px;
+        a{
+          background-color: #cccccc;
+          padding: 10px;
+          border-radius: 50%;
+          display: inline-block;
+          color: #fff;
+          &:hover,&:focus{
+            background-color: red;
+          }
+          .wjsfont{
+            font-size: 55px;
+          }
+        }
+      }
+    }
+  }
+  /* 内容 */
+  .news_content{
+      a{
+        color: #337ab7;
+      }
+      a:hover{
+          text-decoration: underline;
+      }
+  }
+}
+
+// 合作伙伴
+.wjs_partner{
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+    h2{
+        color: #000;
+    }
+    ul{
+        list-style: none;
+        li{
+            float: left;
+            a{
+                font-size: 80px;
+                margin-left: 30px;
+                color: #808080;
+            }
+            a:hover{
+                color: #337ab7;
+            }
+        }
+    }
+}
